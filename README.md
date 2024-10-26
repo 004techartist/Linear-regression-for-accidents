@@ -1,0 +1,1 @@
+The screen shots will show the terminal output after running the python code ,which shows my model has attained an accuracy of 0.36 which is not the best but with continued  training  the model will become better with time. The model is saved as improved_xgb_accident_severity_model.pkl.
