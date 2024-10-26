@@ -66,14 +66,14 @@ df['Age_band_of_driver'] = df['Age_band_of_driver'].replace(age_band_mapping)
 severity_mapping = {'Slight Injury': 0, 'Serious Injury': 1, 'Fatal': 2}
 df['Accident_severity'] = df['Accident_severity'].map(severity_mapping)
 
-# Separate features and target
+
 X = df.drop('Accident_severity', axis=1)
 y = df['Accident_severity']
 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Use SMOTEENN for balancing classes
+
 smote_enn = SMOTEENN(random_state=42)
 X_train_res, y_train_res = smote_enn.fit_resample(X_train, y_train)
 
